@@ -1,0 +1,33 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九九乘法表JS</title>
+</head>
+<body>
+    <center>
+        <a href="https://selena067.github.io/school/">首頁</a>
+    </center>
+
+<script>
+    document.write("<table align=\"center\" width=\"300\" border=\"1\" style=\"border-collapse: collapse; border-width: 2px\">"+
+        "<thead>"+
+            "<td colspan=\"3\" align=\"center\" bgcolor=\"black\" style=\"color: #FFFFFF; font-size: 14px; font-weight: bold\">"+
+                "九九乘法表"+
+            "</td>");
+    for (var i = 0, n = 1; i < 3; n % 3 == 0 ? i++ : i, n++){
+        if(n == 4 || n == 7)
+            document.writeln("</tr>");
+        if(n % 3 == 1)
+            document.writeln("<tr align=\"center\">");
+        document.write("<td>");
+            for (var j = 1; j < 10; j++)
+                if(n*j < 10)
+                    document.write(n+"*"+j+"=&nbsp;&nbsp;"+n*j+"<br>");
+                else
+                    document.write(n+"*"+j+"="+n*j+"<br>");
+        document.write("</td>");
+    }
+    document.write("</tr></thead>");
+</script>
+</body>
+</html>
